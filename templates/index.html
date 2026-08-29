@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>首頁</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="{{ url_for('index') }}">System</a> by Group 9</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="{{ url_for('index') }}">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Content</a>
+								<ul>
+									<li><a href="{{ url_for('admin') }}">管理者介面</a></li>
+									<li><a href="{{ url_for('home') }}">資料庫</a></li>
+								</ul>
+							</li>
+							<li><a href="{{ url_for('contact') }}">聯絡我們</a></li>
+							<li><a href="#" class="button">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Smart Access Control System</h2>
+					<p>Facial Recognition</p>
+					<ul class="actions special">
+						<li><a href="#" class="button primary">Sign Up</a></li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Introducing the system</h2>
+							<p>清楚知道是否為本人親自簽到<br />
+								不需攜帶卡片或記住密碼</p>
+						</header>
+						<span class="image featured"><img src="images\pic01.jpg" alt="" /></span>
+					</section>
+
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-bolt accent2"></span>
+								<h3>Authenticity</h3>
+								<p>方便確認是否為親自簽到，降低代簽到發生的機會。</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+								<h3>Timely</h3>
+								<p>無法辨識之人員接近時，及時發出緊訊通知管理者。</p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-cloud accent4"></span>
+								<h3>Convenience</h3>
+								<p>不用卡片或鑰匙。</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock accent5"></span>
+								<h3>Security</h3>
+								<p>未授權者不能進入。</p>
+							</section>
+						</div>
+					</section>
+
+			<!-- CTA -->
+				<section id="cta">
+
+					<h2>Sign up for System</h2>
+					<p>Welcome to join us !</p>
+
+					<form>
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-8 col-12-mobilep">
+								<input type="email" name="email" id="email" placeholder="Email Address" />
+							</div>
+							<div class="col-4 col-12-mobilep">
+								<input type="submit" value="Sign Up" class="fit" />
+							</div>
+						</div>
+					</form>
+
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

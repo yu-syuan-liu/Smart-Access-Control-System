@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>資料庫</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="{{ url_for('index') }}">System</a> by Group 9</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="{{ url_for('index') }}">Home</a></li>
+					<li>
+						<a href="#" class="icon solid fa-angle-down">Content</a>
+						<ul>
+							<li><a href="{{ url_for('admin') }}">管理者介面</a></li>
+							<li><a href="{{ url_for('home') }}">資料庫</a></li>
+					
+						</ul>
+					</li>
+					<li><a href="{{ url_for('contact') }}">聯絡我們</a></li>
+					<li><a href="#" class="button">Sign Up</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header>
+				<h2>Database</h2>
+				<p>資料庫</p>
+			</header>
+
+			<div class="row">
+				<div class="col-12">
+					<section class="box">
+						<h3>人員資料</h3>
+						<div class="table-wrapper">
+							<table>
+								<thead>
+									<tr>
+										<th>Num</th>						
+										<th>Time</th>
+										<th>Temperature</th>
+										<th>Name</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									{% for item in data %}
+                        						<tr>
+                            							<td>{{item[0]}}</td>
+                            							<td>{{item[1]}}</td>
+                            							<td>{{item[3]}}</td>
+                            							<td>{{item[4]}}</td>
+                        						</tr>
+                    							{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+		<!-- Scripts -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</div>
+</body>
+</html>
